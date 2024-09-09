@@ -17,20 +17,178 @@ body{
     max-width: 1000px;
     margin: auto;
 }
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100hv;
-    width: 300px;
-    z-index: 999;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+
+
+.btnSade {
+    background: white !important;
+    border: #a271f2 solid 1px!important;
+    color:  #a271f2 !important;
 }
-.sidebar li{
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Manrope, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+header {
+    height: 86px;
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    min-width: 70px;
+
+    img {
+        max-width: 114px
+    }
+}
+
+#navIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+#navIcons>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.bayraq {
+    img {
+        width: 20px;
+        height: 16px;
+        object-fit: cover;
+    }
+}
+
+.barIcon {
+    padding: 10px;
+    padding-right: 0;
+}
+
+.fa-bars {
+    font-size: 18px;
+    }
+
+.btns {
+    button {
+        margin-top: 20px;
+        letter-spacing: .1px;
+        opacity: 1;
+        color: white;
+        font-weight: 700;
+        font-family: Manrope, sans-serif;
+        text-align: center;
+        padding-top: .56rem;
+        padding-bottom: .56rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background-image: linear-gradient(90deg, #7028e4, #e5b2ca);
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        text-transform: none;
+        border: 0;
+        min-height: 40px;
+        font-size: 16px;
+    }
+
+
+}
+
+
+/* mobil navbar side bar */
+
+.mobilNavBar {
+    /* box-shadow:   0 #0000; */
+    border-left: 1px solid #0000004e;
+    position: fixed;
+    transition: .5s all;
+    top: 0;
+    bottom: 0;
+    right: -100%;
     width: 100%;
+    max-width: 24rem;
+    background: white;
+    padding: 24px;
+    z-index: 999;
+}
+
+#close {
+    text-align: right;
+    font-size: 20px;
+}
+
+#menuMob {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    color: #300b60;
+    font-weight: 700;
+    margin: 0 12px;
+    padding: 24px 0;
+
+    li {
+        padding: .5rem;
+    }
+}
+
+.m-20 {
+    margin-left: 20px;
+    gap: 30px;
+}
+
+.right {
+    right: 0;
+}
+
+/* desk navbar */
+
+#menuDesk {
+    display: none;
+    align-items: center;
+    font-weight: bold;
+    gap: 1.5rem;
+
+}
+
+.btnHidden {
+    display: none !important;
+}
+
+@media only screen and (min-width: 1024px) {
+    .hiddenMenu {
+        display: none;
+    }
+
+    #menuDesk {
+        display: flex;
+    }
+
+}
+
+@media only screen and (min-width: 1340px) {
+    .mobilNavBar {
+        display: none;
+    }
+
+    .btnHidden {
+        display: flex;
+        gap: 20px;
+        button{
+            white-space: nowrap;
+            margin-top: 0;
+        }
+    }
+
 }
 

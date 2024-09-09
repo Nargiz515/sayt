@@ -107,12 +107,6 @@ function hesablaUmumiQiymet() {
 
     umumiQiymet.innerHTML = `₼ ${finalQiymet}`  
 }
-function showSideBar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
+const mobilNavBar = document.querySelector(".mobilNavBar")
 
-}
-function hideSideBar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-}
+function sideBar() { mobilNavBar.classList.toggle("right") }
